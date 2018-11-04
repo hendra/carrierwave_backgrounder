@@ -35,7 +35,7 @@ module CarrierWave
         asset, asset_tmp = record.send(:"#{column}"), record.send(:"#{column}_tmp")
         cache_directory  = File.expand_path(asset.cache_dir, asset.root)
         # XXX Hardcoded our path here... not ideal..
-        @cache_path      = open("https://s3-ap-southeast-1.amazonaws.com/boatflow2/uploads/tmp/#{asset_tmp}")
+        @cache_path      = open("https://s3-ap-southeast-1.amazonaws.com/cdn41/uploads/tmp/#{asset_tmp}")
         @tmp_directory   = File.join(cache_directory, asset_tmp.split("/").first)
       end
 
